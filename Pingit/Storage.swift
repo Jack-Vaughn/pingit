@@ -10,7 +10,12 @@ import Cocoa
 
 struct Storage {
     static let menuSpace = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    
     static var timerKiller = false
-    static var notifiedCount = 0
+    
     static var clipboardContent = String()
+    
+    static var onlineNotificationCount = 0
+    
+    static var offlineNotification = true
 }

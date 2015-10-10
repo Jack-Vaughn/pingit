@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var actionItem: NSMenuItem!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        setIcon(name: "online")
+        setIcon(name: "normal")
     }
     
     @IBAction func actionClicked(sender: AnyObject) {

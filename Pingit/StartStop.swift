@@ -1,5 +1,5 @@
 //
-//  Checking.swift
+//  StartStop.swift
 //  Pingit
 //
 //  Created by Vaughn, Jack on 10/9/15.
@@ -35,8 +35,12 @@ extension AppDelegate {
     func stopChecking() {
         actionItem.title = "Check computer in clipboard....."
         computerNameItem.title = "No computer to check"
+        
         Storage.timerKiller = true
-        Storage.notifiedCount = 0
-        setIcon(name: "online")
+        
+        Storage.onlineNotificationCount = 0
+        Storage.offlineNotification = true
+        
+        setIcon(name: "normal")
     }
 }

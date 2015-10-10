@@ -13,7 +13,7 @@
 		2D0AD2CF1BC8A9D800435B0C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2CE1BC8A9D800435B0C /* Notifications.swift */; settings = {ASSET_TAGS = (); }; };
 		2D0AD2D11BC8AAE500435B0C /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2D01BC8AAE500435B0C /* Pasteboard.swift */; settings = {ASSET_TAGS = (); }; };
 		2D0AD2D31BC8AD4800435B0C /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2D21BC8AD4800435B0C /* Ping.swift */; settings = {ASSET_TAGS = (); }; };
-		2D0AD2D51BC8AE8B00435B0C /* Checking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2D41BC8AE8B00435B0C /* Checking.swift */; settings = {ASSET_TAGS = (); }; };
+		2D0AD2D51BC8AE8B00435B0C /* StartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2D41BC8AE8B00435B0C /* StartStop.swift */; settings = {ASSET_TAGS = (); }; };
 		2D6CF8D01BC83E4900762461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */; };
 		2D6CF8D41BC83E4900762461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF8D31BC83E4900762461 /* Assets.xcassets */; };
 		2D8C70DF1BC84251005D3625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C70DE1BC84251005D3625 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -26,7 +26,7 @@
 		2D0AD2CE1BC8A9D800435B0C /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		2D0AD2D01BC8AAE500435B0C /* Pasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
 		2D0AD2D21BC8AD4800435B0C /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ping.swift; path = Pingit/Ping.swift; sourceTree = "<group>"; };
-		2D0AD2D41BC8AE8B00435B0C /* Checking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checking.swift; path = Pingit/Checking.swift; sourceTree = "<group>"; };
+		2D0AD2D41BC8AE8B00435B0C /* StartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartStop.swift; path = Pingit/StartStop.swift; sourceTree = "<group>"; };
 		2D6CF8CC1BC83E4900762461 /* Pingit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D6CF8D31BC83E4900762461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		2D0AD2D61BC8AFA500435B0C /* AppDelegate-Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2D0AD2D41BC8AE8B00435B0C /* Checking.swift */,
+				2D0AD2D41BC8AE8B00435B0C /* StartStop.swift */,
 				2D0AD2C81BC8A64400435B0C /* IconChange.swift */,
 				2D0AD2D21BC8AD4800435B0C /* Ping.swift */,
 			);
@@ -163,7 +163,7 @@
 				2D0AD2D11BC8AAE500435B0C /* Pasteboard.swift in Sources */,
 				2D0AD2CD1BC8A87200435B0C /* Storage.swift in Sources */,
 				2D0AD2D31BC8AD4800435B0C /* Ping.swift in Sources */,
-				2D0AD2D51BC8AE8B00435B0C /* Checking.swift in Sources */,
+				2D0AD2D51BC8AE8B00435B0C /* StartStop.swift in Sources */,
 				2D0AD2C71BC898EE00435B0C /* DispatchTimer.swift in Sources */,
 				2D0AD2C91BC8A64400435B0C /* IconChange.swift in Sources */,
 			);
