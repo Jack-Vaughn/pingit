@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0AD2C71BC898EE00435B0C /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */; settings = {ASSET_TAGS = (); }; };
 		2D6CF8D01BC83E4900762461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */; };
-		2D6CF8D21BC83E4900762461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF8D11BC83E4900762461 /* ViewController.swift */; };
 		2D6CF8D41BC83E4900762461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF8D31BC83E4900762461 /* Assets.xcassets */; };
-		2D6CF8D71BC83E4900762461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF8D51BC83E4900762461 /* Main.storyboard */; };
+		2D8C70DF1BC84251005D3625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C70DE1BC84251005D3625 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		2D6CF8CC1BC83E4900762461 /* Pingit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D6CF8D11BC83E4900762461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D6CF8D31BC83E4900762461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2D6CF8D61BC83E4900762461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D6CF8D81BC83E4900762461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8C70DE1BC84251005D3625 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */,
-				2D6CF8D11BC83E4900762461 /* ViewController.swift */,
 				2D6CF8D31BC83E4900762461 /* Assets.xcassets */,
-				2D6CF8D51BC83E4900762461 /* Main.storyboard */,
 				2D6CF8D81BC83E4900762461 /* Info.plist */,
+				2D8C70DE1BC84251005D3625 /* Main.storyboard */,
+				2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */,
 			);
 			path = Pingit;
 			sourceTree = "<group>";
@@ -92,6 +92,7 @@
 				TargetAttributes = {
 					2D6CF8CB1BC83E4900762461 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = J7LEW9724V;
 					};
 				};
 			};
@@ -119,7 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D6CF8D41BC83E4900762461 /* Assets.xcassets in Resources */,
-				2D6CF8D71BC83E4900762461 /* Main.storyboard in Resources */,
+				2D8C70DF1BC84251005D3625 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,23 +131,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6CF8D21BC83E4900762461 /* ViewController.swift in Sources */,
 				2D6CF8D01BC83E4900762461 /* AppDelegate.swift in Sources */,
+				2D0AD2C71BC898EE00435B0C /* DispatchTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2D6CF8D51BC83E4900762461 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D6CF8D61BC83E4900762461 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2D6CF8D91BC83E4900762461 /* Debug */ = {
@@ -233,11 +223,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pingit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rcsnc.Pingit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -245,11 +238,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Pingit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rcsnc.Pingit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -272,6 +268,7 @@
 				2D6CF8DD1BC83E4900762461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
