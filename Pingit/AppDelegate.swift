@@ -50,7 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             computerNameItem.title = "Checking \(pasteboardContent!)....."
         }
         let timerQueue = dispatch_queue_create("org.rcsnc.startChecking", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_BACKGROUND, 0))
-        _ = DispatchTimer.scheduledTimerWithTimeInterval(milliseconds: 5000, queue: timerQueue, repeats: true) { (timer:DispatchTimer) in
+        _ = DispatchTimer.scheduledTimerWithTimeInterval(milliseconds: 3000, queue: timerQueue, repeats: true) { (timer:DispatchTimer) in
             if (self.timerKiller) {
                 timer.invalidate()
                 let icon = NSImage(named: "normal")
