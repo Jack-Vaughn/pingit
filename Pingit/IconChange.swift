@@ -12,7 +12,7 @@ extension AppDelegate {
     func setIcon(name name: String) {
         let icon = NSImage(named: name)
         icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
+        Storage.menuSpace.image = icon
+        Storage.menuSpace.menu = menu
     }
 }
