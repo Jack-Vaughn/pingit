@@ -19,17 +19,8 @@ extension AppDelegate {
         Storage.clipboardContent = Pasteboard().getContent()
         computerNameItem.title = "Checking \(Storage.clipboardContent)....."
         
-        let timerQueue = dispatch_queue_create("org.rcsnc.startChecking", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_BACKGROUND, 0))
-        _ = DispatchTimer.scheduledTimerWithTimeInterval(milliseconds: 3000, queue: timerQueue, repeats: true) { (timer:DispatchTimer) in
-            if (Storage.timerKiller) {
-                timer.invalidate()
-                self.setIcon(name: "normal")
-            } else {
-                if (self.ping(Storage.clipboardContent) == "invalid") {
-                    timer.invalidate()
-                }
-            }
-        }
+        pingOnTimer(id: "org.rcnsc.quick_check", milliseconds: 1, repeats: false)
+        pingOnTimer(id: "org.rcsnc.check_on_interval", milliseconds: 3000, repeats: true)
     }
     
     func stopChecking() {
@@ -42,5 +33,20 @@ extension AppDelegate {
         Storage.offlineNotification = true
         
         setIcon(name: "normal")
+    }
+    
+    func pingOnTimer(id id: String, milliseconds: UInt, repeats: Bool) {
+        let timerQueue = dispatch_queue_create(id, dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_BACKGROUND, 0))
+        _ = DispatchTimer.scheduledTimerWithTimeInterval(milliseconds: milliseconds, queue: timerQueue, repeats: repeats) { (timer:DispatchTimer) in
+            if (Storage.timerKiller) {
+                timer.invalidate()
+                self.setIcon(name: "normal")
+            } else {
+                if (self.ping(Storage.clipboardContent) == "invalid") {
+                    timer.invalidate()
+                }
+            }
+        }
+
     }
 }
