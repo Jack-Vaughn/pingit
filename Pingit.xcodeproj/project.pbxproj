@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D0AD2C71BC898EE00435B0C /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */; settings = {ASSET_TAGS = (); }; };
+		2D0AD2C91BC8A64400435B0C /* IconChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AD2C81BC8A64400435B0C /* IconChange.swift */; settings = {ASSET_TAGS = (); }; };
 		2D6CF8D01BC83E4900762461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */; };
 		2D6CF8D41BC83E4900762461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF8D31BC83E4900762461 /* Assets.xcassets */; };
 		2D8C70DF1BC84251005D3625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8C70DE1BC84251005D3625 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -15,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
+		2D0AD2C81BC8A64400435B0C /* IconChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconChange.swift; sourceTree = "<group>"; };
 		2D6CF8CC1BC83E4900762461 /* Pingit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D6CF8D31BC83E4900762461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */,
+				2D0AD2C81BC8A64400435B0C /* IconChange.swift */,
 				2D6CF8D31BC83E4900762461 /* Assets.xcassets */,
 				2D6CF8D81BC83E4900762461 /* Info.plist */,
 				2D8C70DE1BC84251005D3625 /* Main.storyboard */,
@@ -133,6 +136,7 @@
 			files = (
 				2D6CF8D01BC83E4900762461 /* AppDelegate.swift in Sources */,
 				2D0AD2C71BC898EE00435B0C /* DispatchTimer.swift in Sources */,
+				2D0AD2C91BC8A64400435B0C /* IconChange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,19 +11,18 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    //IBOutlets
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var computerNameItem: NSMenuItem!
     @IBOutlet weak var actionItem: NSMenuItem!
     
+    //Global Variables
     let menuSpace = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     var timerKiller = false
     var notifiedCount = 0
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let icon = NSImage(named: "normal")
-        icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
+        setIcon(name: "online")
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -69,10 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func stopChecking() {
         timerKiller = true
         notifiedCount = 0
-        let icon = NSImage(named: "normal")
-        icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
+        setIcon(name: "online")
     }
     
     func ping(pasteboardContent: String?) -> String {
@@ -105,11 +101,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func online() -> String {
-        let icon = NSImage(named: "online")
-        icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
-        if (notifiedCount % 5 == 0) {
+        setIcon(name: "online")
+        if (notifiedCount % 10 == 0) {
             notify(title: "Computer Online", message: "The computer is online")
         }
         notifiedCount++
@@ -117,19 +110,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func offline() -> String {
-        let icon = NSImage(named: "offline")
-        icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
+        setIcon(name: "offline")
         notifiedCount = 0
         return "offline"
     }
     
     func invalid() -> String {
-        let icon = NSImage(named: "x")
-        icon!.template = true
-        menuSpace.image = icon
-        menuSpace.menu = menu
+        setIcon(name: "x")
         notify(title: "Computer Name Invalid", message: "Either the computer name is not valid or the computer has not been on the network this week.")
         return "invalid"
     }
