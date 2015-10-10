@@ -36,13 +36,17 @@ extension AppDelegate {
     }
     
     func online() -> String {
-        setIcon(name: "online")
-        if (Storage.onlineNotificationCount % 10 == 0) {
-            Notifications().notify(title: "Computer Online", message: "The computer is currently online")
+        if (!Storage.timerKiller) {
+            setIcon(name: "online")
+            if (Storage.onlineNotificationCount % 10 == 0) {
+                Notifications().notify(title: "Computer Online", message: "The computer is currently online")
+            }
+            Storage.onlineNotificationCount++
+            Storage.offlineNotification = false
+            return "online"
+        } else {
+            return ""
         }
-        Storage.onlineNotificationCount++
-        Storage.offlineNotification = false
-        return "online"
     }
     
     func offline() -> String {
