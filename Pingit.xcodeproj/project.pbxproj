@@ -21,12 +21,12 @@
 
 /* Begin PBXFileReference section */
 		2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
-		2D0AD2C81BC8A64400435B0C /* IconChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconChange.swift; sourceTree = "<group>"; };
+		2D0AD2C81BC8A64400435B0C /* IconChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconChange.swift; path = Pingit/IconChange.swift; sourceTree = "<group>"; };
 		2D0AD2CC1BC8A87200435B0C /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2D0AD2CE1BC8A9D800435B0C /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		2D0AD2D01BC8AAE500435B0C /* Pasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
-		2D0AD2D21BC8AD4800435B0C /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
-		2D0AD2D41BC8AE8B00435B0C /* Checking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checking.swift; sourceTree = "<group>"; };
+		2D0AD2D21BC8AD4800435B0C /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ping.swift; path = Pingit/Ping.swift; sourceTree = "<group>"; };
+		2D0AD2D41BC8AE8B00435B0C /* Checking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checking.swift; path = Pingit/Checking.swift; sourceTree = "<group>"; };
 		2D6CF8CC1BC83E4900762461 /* Pingit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pingit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D6CF8D31BC83E4900762461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D0AD2D61BC8AFA500435B0C /* AppDelegate-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D0AD2D41BC8AE8B00435B0C /* Checking.swift */,
+				2D0AD2C81BC8A64400435B0C /* IconChange.swift */,
+				2D0AD2D21BC8AD4800435B0C /* Ping.swift */,
+			);
+			name = "AppDelegate-Extensions";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2D6CF8C31BC83E4900762461 = {
 			isa = PBXGroup;
 			children = (
@@ -65,16 +76,14 @@
 			isa = PBXGroup;
 			children = (
 				2D6CF8CF1BC83E4900762461 /* AppDelegate.swift */,
-				2D0AD2D41BC8AE8B00435B0C /* Checking.swift */,
-				2D0AD2C81BC8A64400435B0C /* IconChange.swift */,
+				2D0AD2D61BC8AFA500435B0C /* AppDelegate-Extensions */,
 				2D0AD2CC1BC8A87200435B0C /* Storage.swift */,
 				2D0AD2CE1BC8A9D800435B0C /* Notifications.swift */,
 				2D0AD2D01BC8AAE500435B0C /* Pasteboard.swift */,
-				2D0AD2D21BC8AD4800435B0C /* Ping.swift */,
+				2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */,
 				2D6CF8D31BC83E4900762461 /* Assets.xcassets */,
 				2D6CF8D81BC83E4900762461 /* Info.plist */,
 				2D8C70DE1BC84251005D3625 /* Main.storyboard */,
-				2D0AD2C61BC898EE00435B0C /* DispatchTimer.swift */,
 			);
 			path = Pingit;
 			sourceTree = "<group>";

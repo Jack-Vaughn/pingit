@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Test
+//  Pingit
 //
-//  Created by Jack Vaughn on 9/27/15.
-//  Copyright © 2015 Jack Vaughn. All rights reserved.
+//  Created by Vaughn, Jack on 10/9/15.
+//  Copyright © 2015 Rutherford County Schools. All rights reserved.
 //
 
 import Cocoa
