@@ -19,5 +19,7 @@ struct Storage {
     
     static var offlineNotification = true
     
+    static var invalidNotification = true
+    
     static var currentComputer = String()
 }

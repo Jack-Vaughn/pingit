@@ -42,7 +42,8 @@ extension AppDelegate {
                 Notifications().notify(title: "Computer Online", message: "The computer is currently online")
             }
             Storage.onlineNotificationCount++
-            Storage.offlineNotification = false
+            Storage.offlineNotification = true
+            Storage.invalidNotification = true
             return "online"
         } else {
             return ""
@@ -53,15 +54,19 @@ extension AppDelegate {
         setIcon(name: "offline")
         if Storage.offlineNotification {
             Notifications().notify(title: "Computer Offline", message: "The computer is currently offline")
+            Storage.offlineNotification = false
         }
-        Storage.offlineNotification = false
         Storage.onlineNotificationCount = 0
+        Storage.invalidNotification = true
         return "offline"
     }
     
     func invalid() -> String {
         setIcon(name: "x")
-        Notifications().notify(title: "Computer Name Invalid", message: "Either the computer name is not valid or the computer has not been on the network this week.")
+        if (Storage.invalidNotification) {
+            Notifications().notify(title: "Computer Name Invalid", message: "Either the computer name is not valid or the computer has not been on the network this week.")
+            Storage.invalidNotification = false
+        }
         return "invalid"
     }
 
