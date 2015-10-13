@@ -651,6 +651,11 @@
                 </customObject>
                 <menu id="LXR-8m-7Uo">
                     <items>
+                        <menuItem title="Pingit v0.9.1" enabled="NO" id="Bt3-O6-V9K">
+                            <attributedString key="attributedTitle"/>
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="Gt4-w7-DA1"/>
                         <menuItem title="No computer to check" id="epC-ov-lL3">
                             <attributedString key="attributedTitle"/>
                             <modifierMask key="keyEquivalentModifierMask"/>
