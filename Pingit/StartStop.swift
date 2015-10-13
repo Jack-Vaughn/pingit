@@ -12,20 +12,21 @@ import Cocoa
 extension AppDelegate {
     
     func startChecking() {
-        actionItem.title = "Stop checking....."
+        Storage.currentComputer = Storage.clipboardContent
+        statusItem.title = "Stop checking....."
+        screenshareItem.title = "Screenshare current computer....."
         
         Storage.timerKiller = false
-        
-        Storage.clipboardContent = Pasteboard().getContent()
-        computerNameItem.title = "Checking \(Storage.clipboardContent)....."
+        computerNameItem.title = "Checking \(Storage.currentComputer)....."
         
         pingOnTimer(id: "org.rcnsc.quick_check", milliseconds: 1, repeats: false)
         pingOnTimer(id: "org.rcsnc.check_on_interval", milliseconds: 3000, repeats: true)
     }
     
     func stopChecking() {
-        actionItem.title = "Check computer in clipboard....."
+        statusItem.title = "Check status of computer in clipboard....."
         computerNameItem.title = "No computer to check"
+        screenshareItem.title = "Screenshare computer in clipboard...."
         
         Storage.timerKiller = true
         
@@ -42,11 +43,10 @@ extension AppDelegate {
                 timer.invalidate()
                 self.setIcon(name: "normal")
             } else {
-                if (self.ping(Storage.clipboardContent) == "invalid") {
+                if (self.ping(Storage.currentComputer) == "invalid") {
                     timer.invalidate()
                 }
             }
         }
-
     }
 }

@@ -14,18 +14,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //IBOutlets
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var computerNameItem: NSMenuItem!
-    @IBOutlet weak var actionItem: NSMenuItem!
+    @IBOutlet weak var statusItem: NSMenuItem!
+    @IBOutlet weak var screenshareItem: NSMenuItem!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         setIcon(name: "normal")
     }
     
-    @IBAction func actionClicked(sender: AnyObject) {
-        if (actionItem.title == "Check computer in clipboard.....") {
+    @IBAction func statusClicked(sender: AnyObject) {
+        storeClipboardContent()
+        if (statusItem.title == "Check status of computer in clipboard.....") {
             startChecking()
         } else {
             stopChecking()
         }
+    }
+    
+    @IBAction func screenshareClicked(sender: AnyObject) {
+        if (screenshareItem.title == "Screenshare computer in clipboard....") {
+            storeClipboardContent()
+            NSWorkspace.sharedWorkspace().openURL(NSURL(string: "vnc://\(Storage.clipboardContent)")!)
+        } else {
+            NSWorkspace.sharedWorkspace().openURL(NSURL(string: "vnc://\(Storage.currentComputer)")!)
+        }
+    }
+    
+    func storeClipboardContent() {
+        Storage.clipboardContent = Pasteboard().getContent()
     }
     
     @IBAction func quitClicked(sender: NSMenuItem) {

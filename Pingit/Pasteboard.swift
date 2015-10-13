@@ -15,7 +15,7 @@ class Pasteboard: NSObject {
         if let _ = pasteboardContent {
             return pasteboardContent!
         } else {
-            return ""
+            return " "
         }
     }
     
