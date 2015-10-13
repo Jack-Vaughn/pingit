@@ -663,7 +663,7 @@
                         <menuItem isSeparatorItem="YES" id="t1v-Jl-Wha">
                             <attributedString key="attributedTitle"/>
                         </menuItem>
-                        <menuItem title="Check computer in clipboard....." id="09J-JL-MbH">
+                        <menuItem title="Check status of computer in clipboard....." id="09J-JL-MbH">
                             <attributedString key="attributedTitle"/>
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
