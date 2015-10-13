@@ -13,12 +13,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     //IBOutlets
     @IBOutlet weak var menu: NSMenu!
+    @IBOutlet weak var versionItem: NSMenuItem!
     @IBOutlet weak var computerNameItem: NSMenuItem!
     @IBOutlet weak var statusItem: NSMenuItem!
     @IBOutlet weak var screenshareItem: NSMenuItem!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         setIcon(name: "normal")
+        let version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
+        versionItem.title = "Pingit v\(version)"
     }
     
     @IBAction func statusClicked(sender: AnyObject) {

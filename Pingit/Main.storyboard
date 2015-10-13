@@ -648,11 +648,12 @@
                         <outlet property="menu" destination="LXR-8m-7Uo" id="y2J-P5-W6j"/>
                         <outlet property="screenshareItem" destination="dhN-Bh-HAR" id="6jn-HB-Bck"/>
                         <outlet property="statusItem" destination="09J-JL-MbH" id="Eir-ko-1fh"/>
+                        <outlet property="versionItem" destination="Bt3-O6-V9K" id="PgI-C5-Rcq"/>
                     </connections>
                 </customObject>
                 <menu id="LXR-8m-7Uo">
                     <items>
-                        <menuItem title="Pingit v0.9.1" enabled="NO" id="Bt3-O6-V9K">
+                        <menuItem title="Pingit &lt;version here&gt;" enabled="NO" id="Bt3-O6-V9K">
                             <attributedString key="attributedTitle"/>
                             <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
