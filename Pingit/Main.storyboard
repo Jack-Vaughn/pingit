@@ -644,13 +644,20 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Pingit" customModuleProvider="target">
                     <connections>
-                        <outlet property="actionItem" destination="09J-JL-MbH" id="Ege-0D-Z4l"/>
                         <outlet property="computerNameItem" destination="epC-ov-lL3" id="rbW-y7-SxW"/>
                         <outlet property="menu" destination="LXR-8m-7Uo" id="y2J-P5-W6j"/>
+                        <outlet property="screenshareItem" destination="dhN-Bh-HAR" id="6jn-HB-Bck"/>
+                        <outlet property="statusItem" destination="09J-JL-MbH" id="Eir-ko-1fh"/>
+                        <outlet property="versionItem" destination="Bt3-O6-V9K" id="PgI-C5-Rcq"/>
                     </connections>
                 </customObject>
                 <menu id="LXR-8m-7Uo">
                     <items>
+                        <menuItem title="Pingit &lt;version here&gt;" enabled="NO" id="Bt3-O6-V9K">
+                            <attributedString key="attributedTitle"/>
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="Gt4-w7-DA1"/>
                         <menuItem title="No computer to check" id="epC-ov-lL3">
                             <attributedString key="attributedTitle"/>
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -658,14 +665,24 @@
                         <menuItem isSeparatorItem="YES" id="t1v-Jl-Wha">
                             <attributedString key="attributedTitle"/>
                         </menuItem>
-                        <menuItem title="Check computer in clipboard....." id="09J-JL-MbH">
+                        <menuItem title="Check status of computer in clipboard....." id="09J-JL-MbH" userLabel="Status">
                             <attributedString key="attributedTitle"/>
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <action selector="actionClicked:" target="Voe-Tx-rLC" id="Kh4-bR-inB"/>
+                                <action selector="statusClicked:" target="Voe-Tx-rLC" id="ChY-KY-9wV"/>
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="QK4-lM-flg">
+                            <attributedString key="attributedTitle"/>
+                        </menuItem>
+                        <menuItem title="Screenshare computer in clipboard...." id="dhN-Bh-HAR" userLabel="Screenshare">
+                            <attributedString key="attributedTitle"/>
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="screenshareClicked:" target="Voe-Tx-rLC" id="zOB-hp-Hro"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="5lX-cD-V6U">
                             <attributedString key="attributedTitle"/>
                         </menuItem>
                         <menuItem title="Quit" id="mYj-lx-oqq">
